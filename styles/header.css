@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 20px 10px;
+}
+.header .header__logo-text {
+  position: absolute;
+  left: 44px;
+  font-size: 36px;
+}
+.header .nav-list.opened {
+  display: block;
+  position: absolute;
+  background-color: #ffffff;
+  list-style: none;
+  right: 0px;
+  width: 100%;
+  text-align: center;
+}
+.header .nav-list {
+  display: none;
+}
+.header .nav-list__item {
+  padding: 5px;
+}
