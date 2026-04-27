@@ -11,6 +11,11 @@
   color: #ffffff;
   font-size: 18px;
 }
+.timer,
+.timer__text {
+  color: #ffffff;
+  font-size: 30px;
+}
 .shop-banner__lower-link {
   margin: auto;
   width: 55%;
