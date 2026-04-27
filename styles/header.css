@@ -5,23 +5,25 @@
   position: relative;
   margin: 20px 10px;
 }
-.header .header__logo-text {
+.nav-list {
+  display: none;
+}
+.nav-list__item {
+  padding: 5px;
+}
+.header__logo-text {
   position: absolute;
   left: 44px;
   font-size: 36px;
 }
-.header .nav-list.opened {
+.nav-list.opened {
   display: block;
   position: absolute;
+  padding: 0;
+  margin: 0;
   background-color: #ffffff;
   list-style: none;
   right: 0px;
   width: 100%;
   text-align: center;
-}
-.header .nav-list {
-  display: none;
-}
-.header .nav-list__item {
-  padding: 5px;
 }

@@ -1,6 +1,7 @@
 .shop-banner__lower {
   background: linear-gradient(to right, #D1068C, #1310A6, #7E1B5C);
   padding: 29px 23px;
+  margin: 20px 0px;
   text-align: center;
 }
 .shop-banner__lower-heading {
