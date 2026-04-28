@@ -26,7 +26,7 @@
 }
 .input-email__button {
   position: absolute;
-  top: 157px;
+  top: 25%;
   right: 58px;
   border: none;
   background-color: #000000;
@@ -58,4 +58,9 @@
 }
 .footer__copyright {
   text-align: center;
+}
+@media (min-width: 521px) {
+  .input-email__button {
+    top: 139px;
+  }
 }

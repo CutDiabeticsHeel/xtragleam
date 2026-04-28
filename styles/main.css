@@ -49,8 +49,13 @@
   margin-top: 20px;
   padding-bottom: 30px;
 }
+.why-choose h3 {
+  padding-left: 5px;
+}
 .why-choose__image {
   width: 87%;
+  height: 37%;
+  object-fit: cover;
   padding-left: 5px;
 }
 .why-choose__heading {
@@ -86,14 +91,16 @@
   list-style: none;
 }
 .product-list__item {
+  display: flex;
+  flex-direction: column;
   background-color: #F0F0F0;
   border: 1px solid #c5c5c5;
   border-radius: 3px;
   margin-bottom: 17px;
 }
 .product-list__item-image {
-  display: block;
-  margin: auto;
+  object-fit: cover;
+  align-self: center;
 }
 .product-list__item-title {
   font-size: 14px;
@@ -216,6 +223,9 @@
 .guide-section__button .white-button__text {
   font-size: 15px;
 }
+.guide-section-image {
+  object-fit: contain;
+}
 .footer {
   display: flex;
   flex-direction: column;
@@ -244,7 +254,7 @@
 }
 .input-email__button {
   position: absolute;
-  top: 157px;
+  top: 25%;
   right: 58px;
   border: none;
   background-color: #000000;
@@ -277,6 +287,11 @@
 .footer__copyright {
   text-align: center;
 }
+@media (min-width: 521px) {
+  .input-email__button {
+    top: 139px;
+  }
+}
 @font-face {
   font-family: "Aeonik TRIAL";
   src: url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.eot");
@@ -301,11 +316,7 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
-}
-.black-button .black-button__text,
-.black-button .black-button__svg {
-  margin-top: auto;
-  margin-bottom: auto;
+  align-items: center;
 }
 .white-button {
   display: flex;
@@ -316,9 +327,5 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
-}
-.white-button .white-button__text,
-.white-button .white-button__svg {
-  margin-top: auto;
-  margin-bottom: auto;
+  align-items: center;
 }

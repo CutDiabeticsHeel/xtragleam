@@ -24,3 +24,6 @@
 .guide-section__button .white-button__text {
   font-size: 15px;
 }
+.guide-section-image {
+  object-fit: contain;
+}

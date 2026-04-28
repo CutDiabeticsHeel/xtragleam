@@ -3,8 +3,13 @@
   margin-top: 20px;
   padding-bottom: 30px;
 }
+.why-choose h3 {
+  padding-left: 5px;
+}
 .why-choose__image {
   width: 87%;
+  height: 37%;
+  object-fit: cover;
   padding-left: 5px;
 }
 .why-choose__heading {
