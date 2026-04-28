@@ -3,7 +3,7 @@
   padding: 31px 9px;
 }
 .guide-section__heading {
-  font-size: 27px;
+  font-size: 25px;
   margin: 0;
   margin-bottom: 34px;
 }
@@ -22,8 +22,9 @@
   border: none;
 }
 .guide-section__button .white-button__text {
-  font-size: 15px;
+  font-size: 18px;
 }
 .guide-section-image {
-  object-fit: contain;
+  width: auto;
+  object-fit: cover;
 }

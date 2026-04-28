@@ -8,6 +8,9 @@
   background-color: #ffffff;
   top: 0px;
 }
+.header__logo {
+  display: flex;
+}
 .nav-list {
   display: none;
 }
@@ -15,8 +18,6 @@
   padding: 5px;
 }
 .header__logo-text {
-  position: absolute;
-  left: 44px;
   font-size: 36px;
 }
 .nav-list.opened {
@@ -30,6 +31,62 @@
   width: 100%;
   text-align: center;
 }
+.icons-list {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.search-section {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 1023px) {
+  .header {
+    position: static;
+    flex-wrap: wrap;
+  }
+  .nav-list {
+    display: flex;
+    list-style: none;
+    font-size: 25px;
+  }
+  .nav-list__item {
+    padding: 10px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .icons-list {
+    display: flex;
+    list-style: none;
+  }
+  .icons-list__item {
+    padding-left: 20px;
+  }
+  .search-section {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  .categories-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .categories-list__item {
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-right: 12px;
+  }
+  .categories-list__item:last-child {
+    margin: 0;
+  }
+}
 .shop-banner {
   background-color: #FFF6FD;
   font-size: 25px;
@@ -38,14 +95,20 @@
   flex-wrap: wrap;
   padding: 10px;
 }
-.shop-banner .shop-banner__text {
+.shop-banner__slogan {
+  font-size: 40px;
+}
+.shop-banner__text {
   font-size: 16px;
   text-align: left;
 }
-.shop-banner .shop-banner__link {
+.shop-banner__link {
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
+}
+.shop-banner__link .black-button__text {
+  font-size: 32px;
 }
 .why-choose {
   background-color: #F0F0F0;
@@ -64,14 +127,51 @@
 .why-choose__heading {
   margin: 0;
   padding: 30px 5px 20px 5px;
-  font-size: 30px;
+  font-size: 28px;
 }
 .why-choose__text {
   padding-left: 5px;
 }
 .why-choose__link {
-  width: 60%;
+  width: 65%;
   margin-left: 5px;
+}
+.why-choose__link .white-button__text {
+  font-size: 22px;
+}
+@media (min-width: 1023px) {
+  .why-choose {
+    padding: 50px 40px;
+  }
+  .why-choose__heading {
+    font-size: 50px;
+    padding: 0;
+  }
+  .why-choose__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    margin-top: 50px;
+    font-size: 27px;
+  }
+  .why-choose__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-row: 1/4;
+  }
+  .why-choose__text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .why-choose__link {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
 }
 .catalog {
   display: flex;
@@ -83,6 +183,7 @@
   padding-top: 30px;
 }
 .catalog__heading {
+  font-size: 20px;
   margin: 0px;
 }
 .catalog__link {
@@ -200,12 +301,15 @@
   margin: auto;
   width: 55%;
 }
+.shop-banner__lower-link .white-button__text {
+  font-size: 19px;
+}
 .guide-section {
   background-color: #f0f0f0;
   padding: 31px 9px;
 }
 .guide-section__heading {
-  font-size: 27px;
+  font-size: 25px;
   margin: 0;
   margin-bottom: 34px;
 }
@@ -224,10 +328,11 @@
   border: none;
 }
 .guide-section__button .white-button__text {
-  font-size: 15px;
+  font-size: 18px;
 }
 .guide-section-image {
-  object-fit: contain;
+  width: auto;
+  object-fit: cover;
 }
 .footer {
   display: flex;
@@ -290,6 +395,11 @@
 .footer__copyright {
   text-align: center;
 }
+@media (max-width: 362px) {
+  .input-email__button {
+    top: 175px;
+  }
+}
 @media (min-width: 521px) {
   .input-email__button {
     top: 139px;
@@ -299,6 +409,18 @@
   font-family: "Aeonik TRIAL";
   src: url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.eot");
   src: url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.woff") format("woff"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/0927e08fbdf95205b63c5b8774adeef6.svg#Aeonik TRIAL") format("svg");
+}
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 body {
   padding: 0px 20px;

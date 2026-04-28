@@ -6,12 +6,18 @@
   flex-wrap: wrap;
   padding: 10px;
 }
-.shop-banner .shop-banner__text {
+.shop-banner__slogan {
+  font-size: 40px;
+}
+.shop-banner__text {
   font-size: 16px;
   text-align: left;
 }
-.shop-banner .shop-banner__link {
+.shop-banner__link {
   margin-top: 40px;
   margin-bottom: 40px;
   width: 100%;
+}
+.shop-banner__link .black-button__text {
+  font-size: 32px;
 }

@@ -59,6 +59,11 @@
 .footer__copyright {
   text-align: center;
 }
+@media (max-width: 362px) {
+  .input-email__button {
+    top: 175px;
+  }
+}
 @media (min-width: 521px) {
   .input-email__button {
     top: 139px;
