@@ -4,14 +4,17 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 80px 10px 10px 10px;
 }
-.shop-banner__slogan{
+.shop-banner__slogan-1,
+.shop-banner__slogan-2 {
     font-size: 40px;
+    margin: 0;
 }
 .shop-banner__text {
-        font-size: 16px;
-        text-align: left;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: left;
 }
 .shop-banner__link {
     margin-top: 40px;
@@ -19,5 +22,33 @@
     width: 100%;
     .black-button__text {
         font-size: 32px;
+    }
+}
+@media (min-width:1024px) {
+    .shop-banner {
+        padding: 90px 0px 45px 60px;
+        background: url("/source/image/shop-banner-desktop.webp") right 0 bottom 0, 
+        linear-gradient(#FFF6FD, #FFF6FD);
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-size: contain;
+        flex-direction: column;
+    }
+    .shop-banner__slogan-1 {
+        font-size: 56px;
+        text-align: left;
+        width: 45%;
+    }
+    .shop-banner__slogan-2 {
+        font-size: 56px;
+        text-align: right;
+        width: 45%;
+    }
+    .shop-banner__text {
+        width: 43%;
+        text-align: left;
+    }
+    .shop-banner__link {
+        width: 22%;
     }
 }
