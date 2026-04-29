@@ -1,5 +1,8 @@
 .header {
   display: flex;
+}
+.main_section {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
@@ -41,8 +44,12 @@
   padding: 0;
   margin: 0;
 }
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .header {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .main_section {
     position: static;
     flex-wrap: wrap;
   }

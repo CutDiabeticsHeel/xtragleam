@@ -28,3 +28,34 @@
     width: auto;
     object-fit: cover;
 }
+@media (min-width:1024px) {
+    .guide-section {
+        margin-top: 100px;
+        margin-bottom: 120px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        padding-left: 27px;
+        column-gap: 50px;
+    }
+    .guide-section-image {
+        width: 100%;
+        height: auto;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .guide-section__heading {
+        font-size: 50px;
+        margin-top: 44px;
+    }
+    .guide-section__text {
+        font-size: 27px;
+    }
+    .guide-section__button {
+        width: 55%;
+        margin-bottom: 44px;
+    }
+}

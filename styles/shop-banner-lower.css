@@ -24,3 +24,27 @@
 .shop-banner__lower-link .white-button__text {
   font-size: 19px;
 }
+@media (min-width: 1024px) {
+  .shop-banner__lower {
+    padding: 50px 140px;
+    margin-top: 100px ;
+  }
+  .shop-banner__lower-heading {
+    margin: 0;
+    font-size: 60px;
+  }
+  .shop-banner__lower-text {
+    margin: 0px 0px 50px 0px;
+    font-size: 30px;
+  }
+  .timer__text {
+    font-size: 86px;
+  }
+  .timer {
+    margin: 0px 0px 50px 0px;
+    font-size: 86px;
+  }
+  .shop-banner__lower-link {
+    width: 22%;
+  }
+}
