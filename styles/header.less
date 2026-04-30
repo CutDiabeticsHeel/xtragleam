@@ -1,12 +1,13 @@
 .header {
     display: flex;
+    position: sticky;
+    top: 0;
 }
 .main_section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
-    position: sticky;
     width: 100%;
     background-color: #ffffff;
     top: 0px;
@@ -48,9 +49,9 @@
     .header {
         flex-direction: column;
         margin-bottom: 100px;
+        position: static;
     }
     .main_section {
-        position: static;
         flex-wrap: wrap;
     }
     .nav-list {
