@@ -1,13 +1,12 @@
 var toggle = document.querySelector(".nav-toggle");
+var cross = document.querySelector(".nav-list__svg")
 var menu = document.querySelector(".nav-list");
 var timer = document.querySelector(".timer")
-toggle.addEventListener("click", function() {
-    console.log("click");
-    menu.classList.toggle("opened")
-})
+const countDownDate = new Date().getTime() + 24 * 60 * 60 * 1000;
+toggle.addEventListener("click", () => menu.classList.add("opened"))
+cross.addEventListener("click", () => menu.classList.remove("opened"))
 
 var x = setInterval(function() {
-    const countDownDate = new Date("Apr 27, 2026 16:03:00").getTime();
     const nowDate = new Date().getTime();
     var distance = countDownDate - nowDate;
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

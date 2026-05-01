@@ -1,7 +1,9 @@
 .header {
   display: flex;
   position: sticky;
+  width: 100%;
   top: 0;
+  z-index: 10;
 }
 .main_section {
   display: flex;
@@ -26,14 +28,21 @@
 }
 .nav-list.opened {
   display: block;
-  position: absolute;
-  left: 0;
+  position: fixed;
+  height: auto;
+  inset: 0;
+  overflow-y: auto;
+  align-content: center;
   padding: 0;
   margin: 0;
   background-color: #ffffff;
   list-style: none;
-  width: 100%;
   text-align: center;
+}
+.nav-list__svg {
+  position: absolute;
+  top: 25px;
+  right: 25px;
 }
 .icons-list {
   display: none;
@@ -46,6 +55,9 @@
   margin: 0;
 }
 @media (min-width: 1024px) {
+  .nav-list__svg {
+    display: none;
+  }
   .header {
     flex-direction: column;
     margin-bottom: 100px;
@@ -519,7 +531,7 @@
 }
 .input-email__button {
   position: absolute;
-  top: 25%;
+  top: 21%;
   right: 58px;
   border: none;
   background-color: #000000;
@@ -654,13 +666,18 @@ body {
 a {
   text-decoration: none;
   color: #000000;
+  transition: transform 1s ease-out;
+}
+button,
+svg {
+  transition: transform 1s ease-out;
 }
 button:hover,
 a:hover {
   transform: scale(1.05);
 }
 svg:hover {
-  transform: scale(1.3);
+  transform: scale(1.5);
 }
 .shop-banner__svg:hover {
   transform: none;
@@ -671,6 +688,11 @@ button:active {
 a:active,
 svg:active {
   opacity: 0.5;
+}
+.svg-none-transition,
+.svg-none-transition:hover {
+  transform: none;
+  transition: none;
 }
 .black-button {
   display: flex;
