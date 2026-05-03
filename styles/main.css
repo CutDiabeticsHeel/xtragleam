@@ -529,6 +529,9 @@
   border-radius: 8px;
   padding: 12px 23px;
 }
+.input-email:invalid {
+  border: 2px solid red;
+}
 .input-email__button {
   position: absolute;
   top: 21%;
@@ -538,6 +541,10 @@
   color: #ffffff;
   padding: 10px;
   border-radius: 5px;
+}
+.input-email__button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .link-list {
   list-style: none;
@@ -666,16 +673,18 @@ body {
 a {
   text-decoration: none;
   color: #000000;
-  transition: transform 0.2s ease-out;
 }
 button,
 svg {
   border: none;
   transition: transform 0.2s ease-out;
+  cursor: pointer;
 }
-button:hover,
-a:hover {
+button:hover {
   transform: scale(1.05);
+}
+.hover-effect:hover {
+  box-shadow: 0px 0px 20px 5px red;
 }
 svg:hover {
   transform: scale(1.5);

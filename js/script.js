@@ -45,3 +45,13 @@ for (const category of categories) {
         }
     });
 }
+
+const submit = document.querySelector(".input-email__button");
+const input = document.querySelector(".input-email")
+input.addEventListener("input", function() {
+    if (!input.checkValidity()){
+        submit.disabled = true;
+    } else {
+        submit.disabled = false;
+    }
+})

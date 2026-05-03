@@ -24,6 +24,9 @@
     border-radius: 8px;
     padding: 12px 23px;
 }
+.input-email:invalid {
+    border: 2px solid red;
+}
 .input-email__button {
     position: absolute;
     top: 21%;
@@ -33,6 +36,10 @@
     color:#ffffff;
     padding: 10px;
     border-radius: 5px;
+}
+.input-email__button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 .link-list {
     list-style: none;
