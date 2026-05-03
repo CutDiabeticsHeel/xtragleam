@@ -109,6 +109,10 @@
   .categories-list__item:last-child {
     margin: 0;
   }
+  .cart-counter {
+    width: 10px;
+    height: 10px;
+  }
 }
 .shop-banner {
   background-color: #FFF6FD;
@@ -528,6 +532,7 @@
   position: relative;
   border-radius: 8px;
   padding: 12px 23px;
+  padding-right: 75px;
 }
 .input-email:invalid {
   border: 2px solid red;
@@ -604,6 +609,7 @@
   }
   .footer-wrapper {
     display: grid;
+    position: relative;
     width: 67%;
     grid-template-columns: 9% 13% 26%;
     column-gap: 98px;
@@ -637,13 +643,13 @@
     display: none;
   }
   .input-email__button {
-    top: 98px;
-    right: 60px;
+    top: 53px;
+    right: 10px;
   }
 }
 @media (min-width: 1260px) {
   .input-email__button {
-    top: 80px;
+    top: 35px;
   }
 }
 @font-face {

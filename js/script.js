@@ -25,7 +25,7 @@ const products = document.querySelectorAll(".product-list__item");
 const viewAll = document.querySelector(".catalog__link")
 viewAll.addEventListener("click", function(){
     for (const product of products) {
-        product.style.display = "flex";
+        product.classList.remove("visually-hidden")
     }
 })
 for (const category of categories) {
@@ -33,12 +33,13 @@ for (const category of categories) {
         const selectedCategory = category.getAttribute("data-categories");
         for (const product of products) {
             if (selectedCategory == product.getAttribute("data-categories")){
-                product.style.display = "flex";
+                product.classList.remove("visually-hidden")
             } else {
-                product.style.display = "none";
+                product.classList.add("visually-hidden")
             }
+            let productPosition = product.getBoundingClientRect()
             window.scrollTo({
-                    top: 1700,
+                    top: productPosition.y,
                     left: 0,
                     behavior: "smooth",
             });
@@ -55,3 +56,22 @@ input.addEventListener("input", function() {
         submit.disabled = false;
     }
 })
+
+const addProducts = document.querySelectorAll(".add-to-cart");
+const cart = document.querySelector(".cart-counter");
+let cartCounter = 0;
+for (addProduct of addProducts) {
+    addProduct.addEventListener("click", () =>{
+        cartCounter++;
+        cart.textContent = cartCounter;
+    })
+}
+const addFavorites = document.querySelectorAll(".product-list__item-favorites")
+const wishlist = document.querySelector(".favorites-counter")
+let favoritesCounter = 0;
+for (addFavorite of addFavorites) {
+    addFavorite.addEventListener("click", () =>{
+        favoritesCounter++;
+        wishlist.textContent = favoritesCounter;
+    })
+}
