@@ -22,28 +22,32 @@ var x = setInterval(function() {
 
 const categories = document.querySelectorAll(".categories__button");
 const products = document.querySelectorAll(".product-list__item");
-const viewAll = document.querySelector(".catalog__link")
-viewAll.addEventListener("click", function(){
+const viewAll = document.querySelector(".catalog__link");
+
+function showProducts(selectedCategory = null) {
+    let firstVisibleProduct = null;
+
     for (const product of products) {
-        product.classList.remove("visually-hidden")
-    }
-})
-for (const category of categories) {
-    category.addEventListener("click", function() {
-        const selectedCategory = category.getAttribute("data-categories");
-        for (const product of products) {
-            if (selectedCategory == product.getAttribute("data-categories")){
-                product.classList.remove("visually-hidden")
-            } else {
-                product.classList.add("visually-hidden")
-            }
-            let productPosition = product.getBoundingClientRect()
-            window.scrollTo({
-                    top: productPosition.y,
-                    left: 0,
-                    behavior: "smooth",
-            });
+        const isVisible = !selectedCategory || product.dataset.categories === selectedCategory;
+
+        product.classList.toggle("visually-hidden", !isVisible);
+        if (isVisible && !firstVisibleProduct) {
+            firstVisibleProduct = product;
         }
+    }
+    if (firstVisibleProduct) {
+        firstVisibleProduct.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+}
+viewAll.addEventListener("click", () => {
+    showProducts();
+});
+for (const category of categories) {
+    category.addEventListener("click", () => {
+        showProducts(category.dataset.categories);
     });
 }
 
